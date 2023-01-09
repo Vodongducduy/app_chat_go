@@ -15,5 +15,6 @@ func Connect(configs *configs.Config) (*pgx.Conn, error) {
 		log.Println("Connect: Can not connect to database", err.Error())
 		return nil, err
 	}
+	log.Printf("Connected to server....")
 	return conn, nil
 }

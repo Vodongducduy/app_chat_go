@@ -2,6 +2,7 @@ package repository
 
 import (
 	"appchat/internal/dtos"
+	"appchat/internal/models"
 	"context"
 	"errors"
 	"log"
@@ -17,12 +18,23 @@ type (
 )
 
 func (r repository) GetUsers(ctx context.Context, id uuid.UUID) (*dtos.UserProfile, error) {
-	var output dtos.UserProfile
-	err := r.Db.QueryRow(ctx, "select full_name, email, phone_number from user_profile where user_id = %1", id).
+	var output models.UserProfile
+	err := r.Db.QueryRow(ctx, "select full_name, email, phone_number from user_profile where user_id = $1", id).
 		Scan(&output.FullName, &output.Email, &output.PhoneNumber)
-	if err != nil && errors.Is(err, pgx.ErrNoRows) {
-		log.Println("GetUsers: ", ErrorNoRecord)
-		return nil, ErrorNoRecord
+	if err != nil {
+		if errors.Is(err, pgx.ErrNoRows) {
+			log.Println("GetUsers: repository", ErrorNoRecord)
+			return nil, ErrorNoRecord
+		}
+		log.Println("GetUsers: internal", err)
+		return nil, err
 	}
-	return &output, err
+
+	UserProfile := &dtos.UserProfile{
+		FullName: output.FullName,
+		Email: output.Email,
+		PhoneNumber: output.PhoneNumber,
+	}
+
+	return UserProfile, nil
 }

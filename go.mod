@@ -5,14 +5,16 @@ go 1.18
 require (
 	github.com/fsnotify/fsnotify v1.6.0
 	github.com/google/uuid v1.1.2
+	github.com/jackc/pgtype v1.13.0
 	github.com/jackc/pgx/v5 v5.2.0
-	github.com/labstack/echo v3.3.10+incompatible
 	github.com/labstack/echo/v4 v4.10.0
 	github.com/spf13/viper v1.14.0
 )
 
 require (
+	github.com/gofrs/uuid v4.0.0+incompatible // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
+	github.com/jackc/pgio v1.0.0 // indirect
 	github.com/jackc/pgpassfile v1.0.0 // indirect
 	github.com/jackc/pgservicefile v0.0.0-20200714003250-2b9c44734f2b // indirect
 	github.com/labstack/gommon v0.4.0 // indirect
