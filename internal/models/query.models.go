@@ -3,12 +3,11 @@ package models
 import (
 	"time"
 
-	uuid "github.com/jackc/pgtype/ext/gofrs-uuid"
+	"github.com/google/uuid"
 )
 
 type (
 	UserProfile struct {
-		ID          uuid.UUID `json:"-"`
 		UserID      uuid.UUID `json:"-"`
 		FullName    string    `json:"fullName"`
 		Email       string    `json:"email"`
@@ -17,5 +16,15 @@ type (
 		CreatedBy   string    `json:"createdBy"`
 		UpdatedAt   time.Time `json:"updatedAt"`
 		UpdatedBy   string    `json:"updatedBy"`
+	}
+
+	AccountParam struct {
+		ID        uuid.UUID
+		UserName  string    `json:"username"`
+		Password  string    `json:"password"`
+		CreatedAt time.Time `json:"createdAt"`
+		CreatedBy string    `json:"createdBy"`
+		UpdatedAt time.Time `json:"updatedAt"`
+		UpdatedBy string    `json:"updatedBy"`
 	}
 )

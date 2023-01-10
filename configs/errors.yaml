@@ -1,0 +1,102 @@
+returnError:
+  # common error
+  ErrInternal:
+    code: E_INTERNAL
+    message: Internal server error
+  ErrBadRequest:
+    code: E_BADREQUEST
+    message: Invalid data
+  ErrUnauthorized:
+    code: E_UNAUTHORIZED
+    message: Unauthorized
+  ErrForbidden:
+    code: E_FORBIDDEN
+    message: Forbidden. Access denied
+  ErrNotFound:
+    code: E_NOTFOUND
+    message: Resource not found
+  ErrConflict:
+    code: E_CONFLICT
+    message: Conflict/Duplicate resource
+  ErrIsActivated:
+    code: E_IS_ACTIVATED
+    message: Account is activated
+
+
+  # field validation errors
+  ErrFieldRequired:
+    code: E_FIELD_REQUIRED
+    message: Required field
+  ErrRowFormat:
+    code: E_ROW_FORMAT
+    message: Wrong row format
+  ErrFieldInvalid:
+    code: E_FIELD_INVALID
+    message: Invalid field
+  ErrFieldFormat:
+    code: E_FIELD_FORMAT
+    message: Wrong field format
+  ErrFieldDuplicated:
+    code: E_FIELD_DUPLICATED
+    message: Field
+  ErrFieldLength:
+    code: E_FIELD_LENGTH
+    message: Wrong field length
+  ErrInvalidToken:
+    code: E_FIELD_TOKEN
+    message: Invalid token
+  ErrMissingValue:
+    code: E_MISSING_VALUE
+    message: Missing value of field
+  ErrInvalidType:
+    code: E_INVALID_TYPE
+    message: Invalid value of type
+  ErrInvalidBusinessCode:
+    code: E_INVALID_BUSINESS_CODE
+    message: Invalid value of business code
+  ErrInvalidAddress:
+    code: E_INVALID_ADDRESS
+    message: Invalid value of address
+  ErrInvalidFormatTime:
+    ode: E_INVALID_FORMAT_TIME
+    message: Invalid format time
+
+
+  #Param validation errors
+  ErrParamInvalid:
+    code: E_PARAM_INVALID
+    message: Invalid request param
+  ErrPhoneNumberExist:
+    code: E_PHONE_NUMBER_EXIST
+    message: Phone number is already exist
+  ErrBankAccountExist:
+    code: E_BANK_ACCOUNT_EXIST
+    message: User Bank account is already exist
+  ErrNationalIdUserExist:
+    code: E_NATION_ID_EXIST
+    message: User national id is already exist
+  ErrInComeTaxCodeExist:
+    code: E_INCOME_TAX_CODE_EXIST
+    message: Income tax code is already exist
+  ErrExistLicenseNumber:
+    code: E_LICENSE_NUMBER_EXIST
+    message: License number exist
+
+  ErrBankBranch:
+    code: E_BANK_BRANCH
+    message: Bank or bank branch is not valid
+
+  ErrBankCode:
+    code: E_BANK_CODE
+    message: Bank is not valid or not found
+
+  ErrUnsupportedFile:
+    code: E_UNSUPPORTED_FILE
+    message: File extension is not supported
+
+  ErrInsufficientBalance:
+    code: E_INSUFFICIENT_BALANCE
+    message: Balance is not sufficient
+  ErrInvalidDocumentType:
+    code: E_INVALID_DOCUMENT_TYPE
+    message: Invalid document type

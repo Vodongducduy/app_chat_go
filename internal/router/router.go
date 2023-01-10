@@ -30,6 +30,7 @@ func NewRouter(routerSetting *echo.Echo, controller controller.IController) IRou
 
 func (r router) setRouter() {
 	r.SetUserRouter()
+	r.SetAccountUserRouter()
 }
 
 func SetUpApplication(configFile *configs.Config) error {

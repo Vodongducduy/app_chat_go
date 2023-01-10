@@ -1,10 +1,16 @@
 package controller
 
-import "appchat/internal/services"
+import (
+	"appchat/configs"
+	"appchat/internal/services"
+)
+
+var Errors *configs.ErrorDefine
 
 type (
 	IController interface {
 		IUserController
+		IAccountController
 	}
 
 	controller struct {

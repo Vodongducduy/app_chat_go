@@ -7,6 +7,7 @@ import (
 type (
 	IRepository interface {
 		IUserRepository
+		IAccountRepository
 	}
 	repository struct {
 		Db *pgx.Conn

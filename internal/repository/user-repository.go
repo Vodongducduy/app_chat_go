@@ -31,8 +31,8 @@ func (r repository) GetUsers(ctx context.Context, id uuid.UUID) (*dtos.UserProfi
 	}
 
 	UserProfile := &dtos.UserProfile{
-		FullName: output.FullName,
-		Email: output.Email,
+		FullName:    output.FullName,
+		Email:       output.Email,
 		PhoneNumber: output.PhoneNumber,
 	}
 

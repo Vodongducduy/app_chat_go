@@ -5,6 +5,7 @@ import "appchat/internal/repository"
 type (
 	IService interface {
 		IUserService
+		IAccountService
 	}
 
 	service struct {

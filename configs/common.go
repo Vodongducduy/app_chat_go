@@ -10,6 +10,10 @@ import (
 
 var Common *CommonConfig
 
+func init() {
+	Common = LoadCommonConfig()
+}
+
 type (
 	CommonConfig struct {
 		FileStatus status `yaml:"status"`

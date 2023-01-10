@@ -7,6 +7,11 @@ import (
 )
 
 type (
+	UserRegister struct {
+		AccountRegister     Account     `json:"accountRegister"`
+		UserProfileRegister UserProfile `json:"userProfileRegister"`
+	}
+
 	Account struct {
 		ID        uuid.UUID `json:"-"`
 		UserName  string    `json:"username"`
@@ -18,7 +23,6 @@ type (
 	}
 
 	UserProfile struct {
-		ID          uuid.UUID `json:"-"`
 		UserID      uuid.UUID `json:"-"`
 		FullName    string    `json:"fullName"`
 		Email       string    `json:"email"`
